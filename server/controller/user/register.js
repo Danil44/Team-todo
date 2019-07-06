@@ -16,6 +16,7 @@ const sendSuccess = (res, { _id }) => {
 };
 
 const registerUser = (req, res) => {
+  console.log(req.body);
   user
     .register({ ...req.body })
     .then(data => sendSuccess(res, data))

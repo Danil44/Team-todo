@@ -16,7 +16,7 @@ const userSchema = new Schema(
       trim: true,
       match: [/\S+@\S+\.\S+/, "email is invalid"]
     },
-    hash: String,
+    hash: { type: String, required: true, select: false },
     image: String
   },
   { timestamps: true }

@@ -1,9 +1,9 @@
 const { user } = require("../../domain");
 
-const sendSuccess = (res, { _id }) => {
-  res.send({
+const sendSuccess = (res, { token }) => {
+  res.header("x-access-token", token).send({
     status: "success",
-    user: _id
+    user: token
   });
 };
 

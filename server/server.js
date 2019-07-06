@@ -20,4 +20,4 @@ app
 
 app.listen(process.env.PORT || port);
 
-module.exports = app;
+global.app = app;
