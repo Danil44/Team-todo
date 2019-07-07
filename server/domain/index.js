@@ -1,5 +1,7 @@
-const user = require("./user/index.js");
+const user = require("./user/index");
+const post = require("./post/index");
 
 module.exports = {
-  user
+  user,
+  post
 };

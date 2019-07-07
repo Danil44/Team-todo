@@ -17,7 +17,8 @@ const userSchema = new Schema(
       match: [/\S+@\S+\.\S+/, "email is invalid"]
     },
     hash: { type: String, required: true, select: false },
-    image: String
+    image: String,
+    posts: [{ type: Schema.Types.ObjectId, ref: "Post" }]
   },
   { timestamps: true }
 );
