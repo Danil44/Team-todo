@@ -23,6 +23,8 @@ const createPost = (token, data) =>
         Post.findById(post._id)
           .populate("created_by")
           .exec((err, post) => {
+            if (err) rej(err);
+
             res(post);
           });
       });
